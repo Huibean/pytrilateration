@@ -8,6 +8,7 @@ import lpe
 class UwbTag(Thread):
 
     def __init__(self):
+        Thread.__init__(self)
         trilateration_core.initialize(0.000, 0.000, 1.000,
                                         0.00, 3.650, 1.000,
                                         6.000, 3.65, 1.000,
