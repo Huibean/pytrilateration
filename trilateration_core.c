@@ -701,7 +701,7 @@ int GetLocation(vec3d *best_solution, int use4thAnchor, vec3d* anchorArray, int 
 	return -1;
 }
 
-int initialize(int x0, int y0, int z0, int x1, int y1, int z1, int x2, int y2, int z2, int x3, int y3, int z3)
+int initialize(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, double x3, double y3, double z3)
 {
 
     anchorArray[0].x = x0; //anchor0.x uint:m
@@ -719,6 +719,8 @@ int initialize(int x0, int y0, int z0, int x1, int y1, int z1, int x2, int y2, i
     anchorArray[3].x = x3; //anchor3.x uint:m
     anchorArray[3].y = y3; //anchor3.y uint:m
     anchorArray[3].z = z3; //anchor3.z uint:m
+
+    printf("initialized");
 
     return 0;
 }
