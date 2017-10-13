@@ -651,10 +651,10 @@ int GetLocation(vec3d *best_solution, int use4thAnchor, vec3d* anchorArray, int 
 
     r4 = (double) distanceArray[3] / 1000.0;
 
-	printf("r1=%f\r\n",r1);
-	printf("r2=%f\r\n",r2);
-    printf("r3=%f\r\n",r3);
- 	printf("r4=%f\r\n",r4);
+	/* printf("r1=%f\r\n",r1); */
+	/* printf("r2=%f\r\n",r2); */
+    /* printf("r3=%f\r\n",r3); */
+     /* printf("r4=%f\r\n",r4); */
     //qDebug() << "GetLocation" << r1 << r2 << r3 << r4;
 
     //r4 = r1;
@@ -737,5 +737,7 @@ int getPos(int r1, int r2, int r3, int r4)
 		
 	result = GetLocation(&report, 0, &anchorArray[0], &Range_deca[0]);	
 	
+    /* printf("result = %d\r\n",result); */
+    /* printf("tag.x=%.3f\r\ntag.y=%.3f\r\ntag.z=%.3f\r\n",report.x,report.y,report.z); */
     return 0;
 }
