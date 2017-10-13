@@ -4,3 +4,4 @@ trilateration_core.py
 _trilateration_core.so
 trilateration_core_wrap.c
 .DS_Store
+.vscode/
