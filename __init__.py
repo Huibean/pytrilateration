@@ -20,6 +20,7 @@ class UwbTag(Thread):
             port_name = '/dev/cu.usbmodem1421'
 
         self.serial_connection = serial.Serial(port_name, 115200, timeout=0.01)
+        self.uwb_init = False
 
     def run(self):
         while True:
@@ -29,6 +30,9 @@ class UwbTag(Thread):
                 if mid == 'mc' and int(mask, 16) >= 7:
                     trilateration_core.getPos(int(range0, 16), int(range1, 16), int(range2, 16), int(range3, 16))
                     lpe.uwb_x, lpe.uwb_y, lpe.uwb_z = trilateration_core.report.x, trilateration_core.report.y, trilateration_core.report.z
+                    if not self.uwb_init:
+                        self.uwb_init = True
+                        print("uwb init")
             else:
                 if m:
                     print("invalid data : {0}".format(m))
