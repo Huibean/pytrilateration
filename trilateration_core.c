@@ -737,7 +737,5 @@ int getPos(int r1, int r2, int r3, int r4)
 		
 	result = GetLocation(&report, 0, &anchorArray[0], &Range_deca[0]);	
 	
-    printf("result = %d\r\n",result);
-    printf("tag.x=%.3f\r\ntag.y=%.3f\r\ntag.z=%.3f\r\n",report.x,report.y,report.z);
     return 0;
 }

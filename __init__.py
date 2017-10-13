@@ -27,11 +27,8 @@ class UwbTag(Thread):
             if len(m) == 65:
                 mid, mask, range0, range1, range2, range3, nranges, resq, debug, tag_id= m.split(" ")
                 if mid == 'mc' and int(mask, 16) >= 7:
-                    print(range0, range1, range2, range3)
                     trilateration_core.getPos(int(range0, 16), int(range1, 16), int(range2, 16), int(range3, 16))
                     lpe.uwb_x, lpe.uwb_y, lpe.uwb_z = trilateration_core.report.x, trilateration_core.report.y, trilateration_core.report.z
-
-                    print(trilateration_core.report.x, trilateration_core.report.y, trilateration_core.report.z)
             else:
                 if m:
                     print("invalid data : {0}".format(m))
