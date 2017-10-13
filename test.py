@@ -3,7 +3,7 @@ import trilateration_core
 trilateration_core.initialize(0.000, 0.000, 1.000,
                                 0.00, 3.650, 1.000,
                                 6.000, 3.65, 1.000,
-                                6.000, 0.00, 1.000)
+                                6.000, 0.00, 1.500)
 
 #  trilateration_core.getPos(5784, 7021, 5995, 2000)
 
